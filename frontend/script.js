@@ -67,13 +67,13 @@ function calc(){
     }
       
 }$(document).ready(function() {
-    // Set the initial slide to display
+    
     var currentSlide = 1;
   
-    // Set the number of slides
+    
     var numSlides = $('.card').length;
   
-    // Move the cards to the left or right when the buttons are clicked
+   
     $('#next').click(function() {
       if (currentSlide < numSlides) {
         currentSlide++;
@@ -89,13 +89,12 @@ function calc(){
     });
   });
   $(document).ready(function() {
-    // Set the initial slide to display
+    
     var currentSlide = 1;
   
-    // Set the number of slides
+   
     var numSlides = $('.card2').length;
   
-    // Move the cards to the left or right when the buttons are clicked
     $('#next2').click(function() {
       if (currentSlide < numSlides) {
         currentSlide++;
