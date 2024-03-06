@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,10 +34,13 @@ return [
     */
 
     'connections' => [
-        'mongodb' => [
-            'driver' => 'mongodb',
-            'dsn' => env('MONGODB_DSN'), // Change this to 'mongodb' as the driver
-            'database' => env('MONGODB_DATABASE', 'restaurant'), // Adjust database name if necessary
+
+        'sqlite' => [
+            'driver' => 'sqlite',
+            'url' => env('DATABASE_URL'),
+            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'prefix' => '',
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         'mysql' => [

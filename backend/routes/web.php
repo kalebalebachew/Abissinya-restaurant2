@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/conn', function () {
+    try {
+        DB::connection()->getPdo();
+        return "MySQL database is connected!";
+    } catch (\Exception $e) {
+        return "Failed to connect to MySQL database: " . $e->getMessage();
+    }
+});
 
 Route::get('/', function () {
-    return public_path('./frontend');
+    return view('welcome');
 });
