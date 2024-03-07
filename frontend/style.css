@@ -76,7 +76,7 @@
   }
   /* home page*/
   #home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),url("https://xn--eldeliciosdetiopa-svb.com/static/restaurant/images/ethiopian-cultural-dining.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),url('https://scontent.fadd2-1.fna.fbcdn.net/v/t1.18169-9/15966299_1922062251355732_7037250422256665266_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qsxi1qzaIoAAX-fCgQA&_nc_ht=scontent.fadd2-1.fna&oh=00_AfBsS4HOS2a-8FW24706e4AizGBlkBlAKSX4hhorhciovw&oe=6610DAA3');
     width: 100%;
     background-size: cover;
     height: 740px;

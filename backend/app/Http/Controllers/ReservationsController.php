@@ -30,7 +30,7 @@ class ReservationsController extends Controller
 
         $reservation->save();
 
-        return response()->json(['success' => true, 'order' => $reservation]);
+        return response()->json(['success' => true, 'reservation' => $reservation]);
 
 
     }
