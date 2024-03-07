@@ -33,7 +33,7 @@ class OrdersController extends Controller
         $order->name = $validatedData['name'];
         $order->phone_number = $validatedData['phone_number'];
         $order->quantity = $validatedData['quantity'];
-        $order->food_id = $menuItem->food_id; // Associate the order with the menu item
+        $order->food_id = $menuItem->food_id; 
 
         $order->save();
 

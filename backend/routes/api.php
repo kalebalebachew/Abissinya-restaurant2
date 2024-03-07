@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ReservationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\OrdersController;
 
 
 Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
-
+Route::post('/reserve', [ReservationsController::class, 'reserveTable']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
