@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone_number');
             $table->integer('quantity');
+            $table->string('food_name');
+             
             $table->unsignedBigInteger('food_id'); 
             $table->foreign('food_id')->references('food_id')->on('menus'); 
         });
