@@ -11,6 +11,6 @@ class Admin extends Model
 {
     use HasFactory, HasApiTokens;
 
-
+    protected $primaryKey = 'food_id';
     
 }

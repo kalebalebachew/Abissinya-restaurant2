@@ -20,10 +20,11 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::middleware('auth:sanctum')->group(function () {
-    // Define protected routes here
+    
     Route::get('/index', [AdminController::class, 'index']);
     Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
-    Route::put('/menu/{menu}', [AdminController::class, 'updateMenuItem']);
+    Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
+    
 });
 
 Route::post('/login', [AdminController::class, 'adminLogin'])->name('admin.login');

@@ -76,20 +76,29 @@ class AdminController extends Controller
         'price' => $menu->price,
     ], 200);
 }
-public function updateMenuItem(Request $request, Menu $menu)
+public function updateMenuItem(Request $request)
 {
-    $request->validate([
-        'food_name' => 'required|string',
-        'price' => 'required|string',
+    $fields = $request->validate([
+        'food_name' => 'required',
+        'price' => 'required',
     ]);
 
-    $menu->update([
-        'food_name' => $request->food_name,
-        'price' => $request->price,
-    ]);
+    $menu = new Menu();
 
-    return response()->json(['success' => true]);
+    $menu->food_name = $fields['food_name'];
+    $menu->price = $fields['price'];
+
+    $menu->save();
+
+    // Return the saved menu item in the response
+    return response()->json([
+        'food_name' => $menu->food_name,
+        'price' => $menu->price,
+    ], 200);
+   
 }
+
+
     public function deleteMenuItem(Request $request, string $id){
 
 
