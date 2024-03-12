@@ -16,6 +16,7 @@ class ReservationsController extends Controller
             'customer_name' => 'required',
             'customer_phone' => 'required',
             'day' => 'required',
+            'table_number' => 'required',
           
 
         ]);
@@ -25,6 +26,7 @@ class ReservationsController extends Controller
         $reservation->customer_name = $validatedData['customer_name'];
         $reservation->customer_phone = $validatedData['customer_phone'];
         $reservation->day = $validatedData['day'];
+        $reservation->table_number = $validatedData['table_number'];
        
 
 

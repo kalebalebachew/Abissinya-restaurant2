@@ -15,27 +15,29 @@ class AdminController extends Controller
    
    
     public function adminLogin(Request $request)
-    {
-        $fields = $request->validate([
-            'username' => 'required|string',
-            'password' => 'required|string',
-        ]);
-    
-        $admin = Admin::where('username', $fields['username'])->first();
-    
-        if (!$admin || $fields['password'] !== $admin->password) {
-            return response()->json(['error' => 'Invalid username or password'], 401);
-        }
-    
-        $token = $admin->createToken('kalebtoken')->plainTextToken;
-    
-        $response = [
-            'admin' => $admin,
-            'token' => $token,
-        ];
-    
-        return response()->json($response, 200);
+{
+    $fields = $request->validate([
+        'username' => 'required|string',
+        'password' => 'required|string',
+    ]);
+
+    $admin = Admin::where('username', $fields['username'])->first();
+
+    if (!$admin || $fields['password'] !== $admin->password) {
+        return response()->json(['error' => 'Invalid username or password'], 401);
     }
+
+   
+    $token = $admin->createToken('kalebtoken')->plainTextToken;
+
+    $response = [
+        'admin' => $admin,
+        'token' => $token,
+    ];
+
+    return response()->json($response, 200);
+}
+
     
     // display all the datas for the admin
     public function index(Request $request){
@@ -83,7 +85,7 @@ public function updateMenuItem(Request $request)
         'price' => 'required',
     ]);
 
-    $menu = new Menu();
+    $menu = new menu();
 
     $menu->food_name = $fields['food_name'];
     $menu->price = $fields['price'];
@@ -99,10 +101,10 @@ public function updateMenuItem(Request $request)
 }
 
 
-    public function deleteMenuItem(Request $request, string $id){
+public function deleteMenuItem(string $food_id)
+{
+    return menu::destroy($food_id);
+}
 
 
-            
-        
-    }
 }

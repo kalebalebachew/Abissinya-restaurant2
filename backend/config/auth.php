@@ -14,8 +14,8 @@ return [
   */
 
   'defaults' => [
-    'guard' => 'web',
-    'passwords' => 'users',
+    'guard' => 'admin',
+    'passwords' => 'admins',
   ],
 
   /*
@@ -36,15 +36,11 @@ return [
   */
 
   'guards' => [
-    'web' => [
-      'driver' => 'session',
-      'provider' => 'users',
+    'admin' => [
+        'driver' => 'session',
+        'provider' => 'admins',
     ],
-    'admin' => [ // Add the admin guard definition
-        'driver' => 'token', // Or your preferred driver (e.g., token)
-        'provider' => 'admins', // Replace with your admin user provider name
-    ]
-  ],
+],
 
   /*
   |--------------------------------------------------------------------------
@@ -64,16 +60,13 @@ return [
   */
 
 
-    'providers' => [
-        'users' => [ // Your existing user provider definition (if applicable)
-            'driver' => 'database',
-            'table' => 'users',
-        ],
-        'admins' => [ // Add the admin user provider definition
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class, // Replace with your admin model path
-        ],
+  'providers' => [
+    'admins' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Admin::class,
     ],
+    
+],
    
   
 

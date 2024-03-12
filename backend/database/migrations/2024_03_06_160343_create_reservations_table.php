@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('customer_name');
             $table->string('customer_phone');
             $table->string('day');
-            $table->bigInteger('table_number');
+            $table->integer('table_number');
         });
     }
 

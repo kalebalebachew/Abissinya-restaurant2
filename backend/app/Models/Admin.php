@@ -3,14 +3,24 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\Admin as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Sanctum\HasApiTokens;
+
+
 
 class Admin extends Model
 {
-    use HasFactory, HasApiTokens;
+    use HasApiTokens, HasFactory;
 
-    protected $primaryKey = 'food_id';
     
+    protected $primaryKey = 'food_id';
+
+    protected $fillable = [
+        'username',
+        'password',
+    ];
+
+  
 }
+

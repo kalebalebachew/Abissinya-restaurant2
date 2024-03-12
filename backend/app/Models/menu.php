@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class menu extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'food_id';
 
     public function orders()
     {
