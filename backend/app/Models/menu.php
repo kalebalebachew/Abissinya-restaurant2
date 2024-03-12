@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class menu extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'food_id';
  
 
     public function orders()
@@ -16,8 +17,14 @@ class menu extends Model
     }
 
     protected $fillable = [
-        
-       
 
+       'food_name',
+       'price'
+
+    ];
+
+    protected $hidden = [
+        'food_id',
+        'created_at',
     ];
 }

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('menus', function (Blueprint $table) {
-         
+            
             $table->bigIncrements('food_id');
             $table->string('food_name');
             $table->string('price');
