@@ -28,7 +28,7 @@ class AdminController extends Controller
     }
 
    
-    $token = $admin->createToken('kalebtoken')->plainTextToken;
+    $token = $admin->createToken('kalebtoken')->plainTextToken;  
 
     $response = [
         'admin' => $admin,
