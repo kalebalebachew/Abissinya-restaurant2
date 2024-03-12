@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
          
-            $table->increments('food_id');
+            $table->bigIncrements('food_id');
             $table->string('food_name');
             $table->string('price');
+            $table->timestamps();
 
         });
     }

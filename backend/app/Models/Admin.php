@@ -9,17 +9,23 @@ use Laravel\Sanctum\HasApiTokens;
 
 
 
+
 class Admin extends Model
 {
     use HasApiTokens, HasFactory;
 
     
-    protected $primaryKey = 'food_id';
+  
 
     protected $fillable = [
         'username',
         'password',
     ];
+  
+
+    
+    
+   
 
   
 }

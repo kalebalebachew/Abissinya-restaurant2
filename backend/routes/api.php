@@ -19,18 +19,19 @@ use App\Http\Controllers\MenuController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::group(['middleware' => ['auth:admin']], function () {
+// Protected routes for the admin to do some operations
+Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::get('/index', [AdminController::class, 'index']);
     Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
     Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
-    
-});
 
+    });
+
+// the only public route for the admin
 Route::post('/login', [AdminController::class, 'adminLogin']);
 
-// Normal User routes
+//Public routes for guest users
 Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
 Route::post('/reserve', [ReservationsController::class, 'reserveTable']);
 Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);
