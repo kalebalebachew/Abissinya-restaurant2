@@ -10,6 +10,10 @@ use Laravel\Sanctum\HasApiTokens;
 
 
 
+
+
+
+
 class Admin extends Model
 {
     use HasApiTokens, HasFactory;
@@ -20,6 +24,13 @@ class Admin extends Model
     protected $fillable = [
         'username',
         'password',
+    ];
+
+    protected $hidden = [
+
+        'password',
+        'id'
+       
     ];
   
 

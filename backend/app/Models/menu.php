@@ -26,5 +26,6 @@ class menu extends Model
     protected $hidden = [
         'food_id',
         'created_at',
+        'updated_at',
     ];
 }
