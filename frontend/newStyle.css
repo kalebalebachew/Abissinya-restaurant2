@@ -1,0 +1,87 @@
+:root{
+    /* Font Family */
+    --ff-primary: 'Poppins', sans-serif;
+
+    /* Font Sizes */
+    --ff-700: 3.5rem;
+    --ff-600: 2.5rem;
+    --ff-500: 1.5rem;
+    --ff-400: 1rem;
+
+    /* Text Color */
+    --clr-golden: 36 100% 62%;
+    --clr-black: 0 0% 0%;
+    --clr-grey: 53 14% 89%;
+}
+
+/* Utilitiy Classes*/
+
+/* Text Color */
+.text-golden{color:hsl(var(--clr-golden))}
+.text-black{color:hsl(var(--clr-black))}
+.text-grey{color:hsl(var(--clr-grey))}
+
+/* Background Color*/
+.bg-golden{background-color: hsl(var(--clr-golden));}
+.bg-dark{background-color: hsl(var(--clr-black));}
+.bg-grey{background-color: hsl(var(--clr-grey));}
+
+/* Font Family */
+.ff-sans{font-family: var(--ff-primary);}
+
+/* Font Size */
+.fs-700{font-size: var(--ff-700);}
+.fs-600{font-size: var(--ff-600);}
+.fs-500{font-size: var(--ff-500);}
+.fs-400{font-size: var(--ff-400);}
+ 
+.uppercase{text-transform: capitalize;}
+
+.letter-spacing-2{letter-spacing: 2px;}
+.letter-spacing-1{letter-spacing: 1px;}
+
+*,::after
+,::before{
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p
+ {
+    margin: 0; 
+}
+
+img
+ {
+    max-width: 100%;
+    display: block;
+}
+
+.flex{
+    display: flex;
+    gap:var(--gap, 1rem);
+}
+.page-navigation a{
+    text-decoration: none;
+    
+}
+body{
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+
+}

@@ -13,7 +13,6 @@
   body {
     
     background-color: #ffffff;
-    width: 100%;
     overflow-x: hidden;
     max-width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -22,7 +21,6 @@
   h1 {
       font-size: 36px;
       margin-bottom: 20px;
-    
   }
   h2 {
     padding-top: 5%;
@@ -51,7 +49,6 @@
     margin-bottom: 10px;
     color: #181717;
   }
-  
   input, select,textarea{
     padding: 10px;
     margin-bottom: 20px;
@@ -173,7 +170,6 @@
     display: inline-block;
     width: 40%;
     vertical-align: top;
-  
   }
   .abt-img {
     width: 100%;
@@ -296,7 +292,7 @@
       -moz-transition: all 1s ease;
       -ms-transition: all 1s ease;
       -o-transition: all 1s ease;
-  }
+  }2
   #menu .all-content .slider .moved-cards .card {
       background-color: #fff;
       padding: 20px;
