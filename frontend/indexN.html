@@ -6,27 +6,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Restaurant</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <link rel="stylesheet" href="newStyle.css">
+    <title>Restaurant</title>
+    
   </head>
-  <body>
-    <header class="flex">
+  <body class="ff-sans">
+    <header class="flex primary-header">
       <div class="logo">
-        <img src="./assets/logo.svg" alt="restaurant logo" />
+        <h1 class="text-golden fs-700">አቢሲኒያ</h1>
       </div>
-
-      <nav class="page-navigation flex">
-        <ul class="flex">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#order">Order</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#food-menu">Our Menu</a></li>
+      <nav>
+        <ul class="page-navigation flex">
+          <li><a href="#home" class="fs-500 text-grey uppercase">Home</a></li>
+          <li><a href="#about-us" class="fs-500 text-grey uppercase">About</a></li>
+          <li><a href="#order" class="fs-500 text-grey uppercase">Order</a></li>
+          <li><a href="#contact" class="fs-500 text-grey uppercase">Contact</a></li>
+          <li><a href="#food-menu" class="fs-500 text-grey uppercase">Our Menu</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section id="home"></section>
+    <main class="main"> 
+      <section id="home" class="flex">
+        <h1 class="fs-600 text-golden uppercase">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, quae.</h1>
+        <button class="fs-500 text-golden bg-dark uppercase btn block">Order Now</button>
+        <button class="fs-500 text-golden bg-dark uppercase btn block">Reservation</button>
+      </section>
       <section id="about-us">
         <h1>Welcome to our <span>Restaurant</span></h1>
         <button>Make a reservation</button>
@@ -157,49 +164,49 @@
       </section>
     </main>
     <footer>
-      <div class="col col-1">
+      <div class="social-media-navigation">
         <h4 class="h4b4">On Social Medias</h4>
         <ul>
           <li>
             <a href="http://www.facebook.com" target="_blank"
-              ><i class="fab fa-facebook-f"></i>&nbsp;facebook</a
+              ><i class="fab fa-facebook-f"></i> &nbsp; &nbsp;facebook</a
             >
           </li>
           <li>
             <a href="http://www.twitter.com" target="_blank"
-              ><i class="fab fa-twitter"></i>&nbsp;twitter</a
+              ><i class="fab fa-twitter"></i> &nbsp; &nbsp;twitter</a
             >
           </li>
           <li>
             <a href="http://www.instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i>&nbsp;instagram</a
+              ><i class="fab fa-instagram"></i> &nbsp; &nbsp;instagram</a
             >
           </li>
           <li>
             <a href="http://www.youtube.com" target="_blank"
-              ><i class="fab fa-youtube"></i>&nbsp;youtube</a
+              ><i class="fab fa-youtube"></i> &nbsp; &nbsp;youtube</a
             >
           </li>
         </ul>
       </div>
 
-      <div class="col col-2">
-        <ul>
-          <h4>Navigation</h4>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#ab">About</a></li>
-          <li><a href="#or">Order</a></li>
-          <li><a href="#cont">Contact</a></li>
+      <nav class="page-navigation flex">
+        <ul class="flex">
+          <li><a href="#home" class="">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#food-menu">Our Menu</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="col col-3">
+      <div class="">
         <h4>Address</h4>
         <ul>
-          <li><i class="fa fa-phone"></i> &nbsp;+251 947827904</li>
-          <li><i class="fa fa-envelope-open"></i> &nbsp;abissinya@gmail.com</li>
-          <li><i class="fa fa-globe"></i> &nbsp;www.abissinya.com</li>
-          <li><i class="fa fa-map-marker"></i> &nbsp;A.A, Ethiopia</li>
+          <li><i class="fa fa-phone"></i> &nbsp; &nbsp;+251 947827904</li>
+          <li><i class="fa fa-envelope-open"></i> &nbsp; &nbsp;abissinya@gmail.com</li>
+          <li><i class="fa fa-globe"></i> &nbsp; &nbsp;www.abissinya.com</li>
+          <li><i class="fa fa-map-marker"></i> &nbsp; &nbsp;A.A, Ethiopia</li>
         </ul>
       </div>
     </footer>
