@@ -11,5 +11,8 @@ class reservations extends Model
 
     protected $fillable = [
 
+        'customer_name',
+        'customer_phone',
+        'table_number',
     ];
 }
