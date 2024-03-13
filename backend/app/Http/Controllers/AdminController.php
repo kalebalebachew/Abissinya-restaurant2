@@ -41,9 +41,9 @@ class AdminController extends Controller
     
     // display all the datas for the admin
     public function index(Request $request){
-        $menu = menu::all();
-        $orders = orders::all();
-        $reservations = reservations::all();
+        $menu = menu::cursorPaginate(10);
+        $orders = orders::cursorPaginate(10);
+        $reservations = reservations::cursorPaginate(10);
     
         
         $data = [
