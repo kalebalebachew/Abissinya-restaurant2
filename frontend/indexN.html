@@ -10,6 +10,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
     <link rel="stylesheet" href="newStyle.css">
+    <script src="newScript.js" defer></script>
     <title>Restaurant</title>
     
   </head>
@@ -20,88 +21,81 @@
       </div>
       <nav>
         <ul class="page-navigation flex">
-          <li><a href="#home" class="fs-500 text-grey uppercase">Home</a></li>
-          <li><a href="#about-us" class="fs-500 text-grey uppercase">About</a></li>
-          <li><a href="#order" class="fs-500 text-grey uppercase">Order</a></li>
-          <li><a href="#contact" class="fs-500 text-grey uppercase">Contact</a></li>
-          <li><a href="#food-menu" class="fs-500 text-grey uppercase">Our Menu</a></li>
+          <li><a href="#home" class="letter-spacing-1 text-grey uppercase">Home</a></li>
+          <li><a href="#about-us" class="letter-spacing-1 text-grey uppercase">About</a></li>
+          <li><a href="#order" class="letter-spacing-1 text-grey uppercase">Order</a></li>
+          <li><a href="#contact" class="letter-spacing-1 text-grey uppercase">Contact</a></li>
+          <li><a href="#food-menu" class="letter-spacing-1 text-grey uppercase">Our Menu</a></li>
         </ul>
       </nav>
     </header>
-    <main class="main"> 
+    <main class="main flow"> 
       <section id="home" class="flex">
-        <h1 class="fs-600 text-golden uppercase">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, quae.</h1>
+        <h1 class="fs-600 text-golden uppercase text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, quae.</h1>
         <button class="fs-500 text-golden bg-dark uppercase btn block">Order Now</button>
         <button class="fs-500 text-golden bg-dark uppercase btn block">Reservation</button>
       </section>
-      <section id="about-us">
-        <h1>Welcome to our <span>Restaurant</span></h1>
-        <button>Make a reservation</button>
+      <section id="about-us" class="grid-container grid-container-about-us">
+        <h1 class="uppercase text-center">About us</h1>
+        <div class="section-detail">
+          <p>
+            At Abissinya Ethiopian Restaurant, we are dedicated to elevating the status and awareness of Ethiopian cuisine by fusing modern
+             creativity with authentic delicious taste.
+              The only thing better than our food is our impeccable service, 
+             through which we demonstrate warmth, professionalism, and integrity. 
+             Our main goal is to have you excited about coming back.
+             Since 1999, Abissinya restaurant has been serving the finest Ethiopian cuisine in addisababa Ethiopia.<br>
+             <span>“Experience the taste of Ethiopia!”</span>
+          </p>
+        </div>
+        <div class="section-img">
+          <img src="./assets/foodSample.svg" alt="">
+        </div>
       </section>
       <section id="food-menu">
-        <h2>Our Menu</h2>
-        <div id="only-food">
-            <h3></h3>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
+        <h2 class="text-center">Our Menu</h2>
+        <div class="catagory-wrapper grid-container">
+          <section id="burger" class="grid-container food-catagories" data-visible="false">
+            <div class="menu-intro">
+
+            </div>
+            <div class="dishes grid-container">
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4>Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>200.00 ETB</p>
+                <button>Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4>Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>200.00 ETB</p>
+                <button>Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4>Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>200.00 ETB</p>
+                <button>Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4>Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>200.00 ETB</p>
+                <button>Add to cart</button>
+              </div>
+
+            </div>
+          </section>
+          <section id="" class="food-item-lists">
+            
+          </section>
         </div>
-        <div id="only-drink">
-            <h3></h3>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-          <article>
-            <img src="" alt="">
-            <h4></h4>
-            <p></p>
-            <p></p>
-            <button>Add to cart</button>
-          </article>
-        </div>
+        
       </section>
       <section id="order">
         <h2>Order Form</h2>
