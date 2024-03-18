@@ -74,15 +74,21 @@ class AdminController extends Controller
 
     // Return the saved menu item in the response
     return response()->json([
+        'success' => 'food created successfully' ,
         'food_name' => $menu->food_name,
         'price' => $menu->price,
+       
     ], 200);
+    
 }
 public function updateMenuItem(Request $request, string $food_id)
 {
     $menu = menu::find($food_id);
     $menu->update($request->all());
-    return $menu;
+    return response()->json(['success' => 'food updated successfully', 
+        'food_name' => $menu->food_name, 
+        'price' => $menu->price,
+]);
 }
  
    
@@ -91,7 +97,8 @@ public function updateMenuItem(Request $request, string $food_id)
 
 public function deleteMenuItem(string $food_id)
 {
-    return menu::destroy($food_id);
+    $menu = menu::destroy($food_id);
+    return response()->json(['success' => 'food deleted successfully']);
 }
 
 

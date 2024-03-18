@@ -19,12 +19,15 @@ use App\Http\Controllers\MenuController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+
 // Protected routes for the admin to do some operations
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::get('/index', [AdminController::class, 'index']);
     Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
     Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
+    Route::delete('/delete-menu/{food_id}', [AdminController::class, 'deleteMenuItem']);
 
     });
 
