@@ -9,6 +9,9 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="newStyle.css">
     <script src="newScript.js" defer></script>
     <title>Restaurant</title>
@@ -21,23 +24,23 @@
       </div>
       <nav>
         <ul class="page-navigation flex">
-          <li><a href="#home" class="letter-spacing-1 text-grey uppercase">Home</a></li>
-          <li><a href="#about-us" class="letter-spacing-1 text-grey uppercase">About</a></li>
-          <li><a href="#order" class="letter-spacing-1 text-grey uppercase">Order</a></li>
-          <li><a href="#contact" class="letter-spacing-1 text-grey uppercase">Contact</a></li>
-          <li><a href="#food-menu" class="letter-spacing-1 text-grey uppercase">Our Menu</a></li>
+          <li><a href="#home" class="letter-spacing-2 text-grey uppercase fs-500">Home</a></li>
+          <li><a href="#about-us" class="letter-spacing-2 text-grey uppercase fs-500">About</a></li>
+          <li><a href="#order" class="letter-spacing-2 text-grey uppercase fs-500">Order</a></li>
+          <li><a href="#contact" class="letter-spacing-2 text-grey uppercase fs-500">Contact</a></li>
+          <li><a href="#food-menu" class="letter-spacing-2 text-grey uppercase fs-500">Our Menu</a></li>
         </ul>
       </nav>
     </header>
-    <main class="main flow"> 
+    <main class="main flow pad-inline"> 
       <section id="home" class="flex">
         <h1 class="fs-600 text-golden uppercase text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, quae.</h1>
-        <button class="fs-500 text-golden bg-dark uppercase btn block">Order Now</button>
-        <button class="fs-500 text-golden bg-dark uppercase btn block">Reservation</button>
+        <button class="text-golden uppercase btn block fs-500">Order Now</button>
+        <button class="text-golden uppercase btn block fs-500">Reservation</button>
       </section>
-      <section id="about-us" class="grid-container grid-container-about-us">
+      <section id="about-us" class="grid-container grid-container-sections">
         <h1 class="uppercase text-center">About us</h1>
-        <div class="section-detail">
+        <div class="main-side">
           <p>
             At Abissinya Ethiopian Restaurant, we are dedicated to elevating the status and awareness of Ethiopian cuisine by fusing modern
              creativity with authentic delicious taste.
@@ -56,153 +59,159 @@
         <h2 class="text-center">Our Menu</h2>
         <div class="catagory-wrapper grid-container">
           <section id="burger" class="grid-container food-catagories" data-visible="false">
-            <div class="menu-intro">
-
+            <div class="menu-intro fs-700">
+              Burger Menu
+              <span class="down-arrow"><i class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="dishes grid-container" id="dish">
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4 class="fs-500">Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4 class="fs-500">Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4 class="fs-500">Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
+              </div>
+              <div class="flow">
+                <img src="./assets/food sample.jpg" alt="">
+                <h4 class="fs-500">Chicken Fries</h4>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
+              </div>
+            </div>
+          </section>
+          <section id="pasta" class="grid-container food-catagories" data-visible="false">
+            <div class="menu-intro fs-700">
+              Pasta Menu
+              <span class="down-arrow"><i class="fa-solid fa-angle-down"></i></span>
             </div>
             <div class="dishes grid-container">
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4>Chicken Fries</h4>
+                <h4 class="fs-500">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p>200.00 ETB</p>
-                <button>Add to cart</button>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4>Chicken Fries</h4>
+                <h4 class="fs-500">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p>200.00 ETB</p>
-                <button>Add to cart</button>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4>Chicken Fries</h4>
+                <h4 class="fs-500">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p>200.00 ETB</p>
-                <button>Add to cart</button>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4>Chicken Fries</h4>
+                <h4 class="fs-500">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p>200.00 ETB</p>
-                <button>Add to cart</button>
+                <p class="fs-500 text-golden" >200.00 ETB</p>
+                <button class="btn text-grey fs-500">Add to cart</button>
               </div>
-
             </div>
           </section>
-          <section id="" class="food-item-lists">
-            
-          </section>
         </div>
-        
       </section>
-      <section id="order">
-        <h2>Order Form</h2>
-        <form action="">
+      <section id="order" class="grid-container grid-container-sections">
+        <h1 class="text-center header">Order Form</h1>
+        <form action="" class="form-block main-side flow">
           <input type="text" name="" id="" placeholder="Name"/>
           <input type="number" name="" id="" placeholder="Phone"/>
           <input type="text" name="" id="" placeholder=""/>
           <input type="text" name="" id="" />
-          <input type="submit" name="" id="" />
+          <input type="submit" name="" id="" class="btn text-grey fs-500"/>
         </form>
+        <div class="section-img">
+          <img src="./assets/foodSample.svg" alt="">
+        </div>
       </section>
-      <section id="reservation">
-        <form action="">
+      <section id="reservation" class="grid-container grid-container-sections">
+        <h1 class="text-center header">Reservation Form</h1>
+        <div class="section-img">
+          <img src="./assets/foodSample.svg" alt="">
+        </div>
+        <form action="" class="form-block main-side flow">
           <input type="text" name="" id="" placeholder="Name" />
           <input type="tel" name="" id="" placeholder="Phone" />
           <input type="number" name="" id="" placeholder="Number of Persons" />
-          <select name="" id="">
-            <option value="">Reservation Day</option>
-            <option value="Monday">Monday</option>
-            <option value="Tuesday">Tuesday</option>
-            <option value="Wednsday">Wednsday</option>
-            <option value="Thursday">Thursday</option>
-            <option value="Friday">Friday</option>
-            <option value="Saturday">Saturday</option>
-            <option value="Sunday">Sunday</option>
-          </select>
-          <select name="time" id="">
-            <option value="">Hour</option>
-            <option value="">1:00 PM</option>
-            <option value="">2:00 PM</option>
-            <option value="">3:00 PM</option>
-            <option value="">4:00 PM</option>
-            <option value="">5:00 PM</option>
-            <option value="">6:00 PM</option>
-            <option value="">7:00 PM</option>
-            <option value="">8:00 PM</option>
-            <option value="">9:00 PM</option>
-            <option value="">10:00 PM</option>
-            <option value="">11:00 PM</option>
-            <option value="">12:00 PM</option>
-          </select>
-          <input type="submit" value="Book A Table">
+          <input type="date" name="" id="">
+          <input type="time" name="" id="">
+          <input type="submit" value="Book A Table" class="btn text-grey fs-500">
         </form>
+        
       </section>
-      <section id="contact">
-        <form action="">
-          <label for="name">Name:</label>
+      <section id="contact" class="grid-container grid-container-sections">
+        <h1 class="text-center header">Contact Us</h1>
+        <form action="" class="form-block main-side flow">
           <input name="name" type="text" placeholder="Name" required />
-          <label for="email">Email:</label>
           <input name="name" type="email" placeholder="e-mail" required />
-          <label for="email">Message:</label>
           <textarea
             name="comment"
             cols="30"
             rows="5"
             placeholder="Comment"
           ></textarea>
-          <input type="submit" value="Send" class="btn-send" />
+          <input type="submit" value="Send" class="btn text-grey fs-500" />
         </form>
+        <div class="section-img">
+          <img src="./assets/foodSample.svg" alt="">
+        </div>
       </section>
     </main>
-    <footer>
-      <div class="social-media-navigation">
-        <h4 class="h4b4">On Social Medias</h4>
-        <ul>
-          <li>
-            <a href="http://www.facebook.com" target="_blank"
-              ><i class="fab fa-facebook-f"></i> &nbsp; &nbsp;facebook</a
-            >
+    <footer class="pad-inline flex footer">
+        <ul class="flex social-media text-black">
+          <li><a href="http://www.facebook.com" class="text-black" target="_blank">
+            <i class="fa-brands fa-facebook"></i> &nbsp; &nbsp;facebook</a>
           </li>
           <li>
-            <a href="http://www.twitter.com" target="_blank"
-              ><i class="fab fa-twitter"></i> &nbsp; &nbsp;twitter</a
-            >
+            <a href="http://www.twitter.com" class="text-black" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i> &nbsp; &nbsp;twitter</a>
           </li>
           <li>
-            <a href="http://www.instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i> &nbsp; &nbsp;instagram</a
-            >
+            <a href="http://www.instagram.com" class="text-black" target="_blank">
+              <i class="fab fa-instagram"></i> &nbsp; &nbsp;instagram</a>
           </li>
           <li>
-            <a href="http://www.youtube.com" target="_blank"
-              ><i class="fab fa-youtube"></i> &nbsp; &nbsp;youtube</a
-            >
+            <a href="http://www.youtube.com" class="text-black" target="_blank">
+              <i class="fab fa-youtube"></i> &nbsp; &nbsp;youtube</a>
           </li>
         </ul>
-      </div>
-
-      <nav class="page-navigation flex">
-        <ul class="flex">
-          <li><a href="#home" class="">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#order">Order</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#food-menu">Our Menu</a></li>
-        </ul>
-      </nav>
-
-      <div class="">
-        <h4>Address</h4>
-        <ul>
-          <li><i class="fa fa-phone"></i> &nbsp; &nbsp;+251 947827904</li>
+        <nav>
+          <ul class="page-navigation flex">
+            <li><a href="#home" class="text-golden">Home</a></li>
+            <li><a href="#about-us" class="text-golden">About</a></li>
+            <li><a href="#order" class="text-golden">Order</a></li>
+            <li><a href="#contact" class="text-golden">Contact</a></li>
+            <li><a href="#food-menu" class="text-golden">Our Menu</a></li>
+          </ul>
+        </nav>
+  
+        <ul class="flex address text-golden">
+          <li><i class="fa fa-phone black"></i> &nbsp; &nbsp;+251 915025399</li>
           <li><i class="fa fa-envelope-open"></i> &nbsp; &nbsp;abissinya@gmail.com</li>
           <li><i class="fa fa-globe"></i> &nbsp; &nbsp;www.abissinya.com</li>
           <li><i class="fa fa-map-marker"></i> &nbsp; &nbsp;A.A, Ethiopia</li>
         </ul>
-      </div>
     </footer>
   </body>
 </html>
