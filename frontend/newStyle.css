@@ -239,3 +239,44 @@ input[type="submit"]{
 .invisible{
   display: none;
 }
+#cart{
+  outline:2px solid blue;
+  width: 80%;
+  padding-block: 2rem;
+  position: fixed;
+  top:15%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+.item-img{
+  width: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.item-description{
+  --flow-space:.8rem;
+}
+.selected-foods{
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
+  border-bottom: .2rem solid hsl(var(--clr-black));
+  padding-block: 1rem;
+  outline:2px solid rgb(255, 51, 0);
+}
+.cart-result{
+  flex-direction: column;
+  align-items: end;
+  padding-inline: 5%;
+  --gap: 1rem;
+}
+.open-close{
+  position: absolute;
+  top: 0;
+  right:2%;
+}
+.btn-popUp{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
