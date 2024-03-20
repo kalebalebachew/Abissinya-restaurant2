@@ -47,7 +47,8 @@ const order = {
   day: day,
 
 }
-axios.post('/api/orders/place', order)
+axio
+s.post('/api/orders/place', order)
 .then(response =>{
   alert('Order created successfully')
 })
