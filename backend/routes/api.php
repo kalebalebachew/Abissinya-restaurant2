@@ -21,7 +21,7 @@ use App\Http\Controllers\MenuController;
 */
 
 
-// Protected routes for the admin to do some operations
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::get('/index', [AdminController::class, 'index']);
@@ -31,10 +31,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     });
 
-// the only public route for the admin
 Route::post('/login', [AdminController::class, 'adminLogin']);
 
-//Public routes for guest users
+
+
 Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
 Route::post('/reserve', [ReservationsController::class, 'reserveTable']);
 Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);
