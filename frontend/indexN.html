@@ -64,7 +64,7 @@
               Burger Menu
               <span class="down-arrow"><i class="fa-solid fa-angle-down"></i></span>
             </div>
-            <div class="dishes grid-container" id="dish">
+            <div class="dishes grid-container invisible" id="dish">
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
                 <h4 class="fs-500">Chicken Fries</h4>
@@ -100,106 +100,61 @@
               Pasta Menu
               <span class="down-arrow"><i class="fa-solid fa-angle-down"></i></span>
             </div>
-            <div class="dishes grid-container">
+            <div class="dishes grid-container invisible">
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4 class="fs-500">Chicken Fries</h4>
+                <h4 class="fs-500 it-name">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur</p>
-                <p class="fs-500 text-golden" >200.00 ETB</p>
-                <button class="btn text-grey fs-500">Add to cart</button>
+                <p class="fs-500 text-golden it-price">200.00 ETB</p>
+                <button class="btn text-grey fs-500 addToCart">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4 class="fs-500">Chicken Fries</h4>
+                <h4 class="fs-500 it-name">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p class="fs-500 text-golden" >200.00 ETB</p>
-                <button class="btn text-grey fs-500">Add to cart</button>
+                <p class="fs-500 text-golden it-price">200.00 ETB</p>
+                <button class="btn text-grey fs-500 addToCart">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4 class="fs-500">Chicken Fries</h4>
+                <h4 class="fs-500 it-name">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p class="fs-500 text-golden" >200.00 ETB</p>
-                <button class="btn text-grey fs-500">Add to cart</button>
+                <p class="fs-500 text-golden it-price">200.00 ETB</p>
+                <button class="btn text-grey fs-500 addToCart">Add to cart</button>
               </div>
               <div class="flow">
                 <img src="./assets/food sample.jpg" alt="">
-                <h4 class="fs-500">Chicken Fries</h4>
+                <h4 class="fs-500 it-name">Chicken Fries</h4>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
-                <p class="fs-500 text-golden" >200.00 ETB</p>
-                <button class="btn text-grey fs-500">Add to cart</button>
+                <p class="fs-500 text-golden it-price" >200.00 ETB</p>
+                <button class="btn text-grey fs-500 addToCart">Add to cart</button>
               </div>
             </div>
           </section>
-          <section id="cart" class="flow mar-inline invisible">
-            <h2 class="fs-600 text-center"a>Your Cart</h2>
-            <button class="open-close fs-600 text-black btn-popUp" id="cart-close"><i class="fa-solid fa-xmark"></i></button>
-            <div class="selected-foods flex">
-              <div class="item-img">
-                <img src="./assets/food sample.jpg" alt="">
-              </div>
-              <div class="item-description flow">
-                <h4 class="item-title fs-500">Chicken Fries</h4>
-                <p class="ingredients">Lorem ipsum dolor sit amet.</p>
-              </div>
-              <p class="item-price fs-500">200.00 ETB</p>
-              <div class="item-quantity flex">
-                <button class="minus fs-500"><i class="fa-solid fa-minus"></i></button>
-                <span class="item-quantity-display fs-500">1</span>
-                <button class="plus fs-500"><i class="fa-solid fa-plus"></i></button>
-              </div>
-              <div class="delete-item fs-500"><i class="fa-solid fa-trash"></i></div>
-            </div>
-            
-            <div class="selected-foods flex">
-              <div class="item-img">
-                <img src="./assets/food sample.jpg" alt="">
-              </div>
-              <div class="item-description">
+          <section id="cart" class="mar-inline invisible">
+            <h2 class="fs-500 text-center"a>Your Cart</h2>
+            <button class="open-close fs-500 text-black btn-popUp" id="cart-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="selected-foods-only">
+              <div class="selected-foods flex">
                 <h4 class="item-title">Chicken Fries</h4>
-                <p class="ingredients">Lorem ipsum dolor sit amet.</p>
+                <p class="item-price">200.00 ETB</p>
+                <div class="item-quantity">
+                  <button class="minus btn-popUp"><i class="fa-solid fa-minus"></i></button>
+                  <span class="item-quantity-display">1</span>
+                  <button class="plus btn-popUp"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="delete-item"><i class="fa-solid fa-trash"></i></div>
               </div>
-              <p class="item-price">200.00 ETB</p>
-              <div class="item-quantity">
-                <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                <span class="item-quantity-display">1</span>
-                <button class="plus fs-500"><i class="fa-solid fa-plus"></i></button>
-              </div>
-              <div class="delete-item fs-500"><i class="fa-solid fa-trash"></i></div>
-            </div>
-
-            <div class="selected-foods flex">
-              <div class="item-img">
-                <img src="./assets/food sample.jpg" alt="">
-              </div>
-              <div class="item-description">
+              <div class="selected-foods flex">
                 <h4 class="item-title">Chicken Fries</h4>
-                <p class="ingredients">Lorem ipsum dolor sit amet.</p>
+                <p class="item-price">200.00 ETB</p>
+                <div class="item-quantity">
+                  <button class="minus btn-popUp"><i class="fa-solid fa-minus"></i></button>
+                  <span class="item-quantity-display">1</span>
+                  <button class="plus btn-popUp"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="delete-item"><i class="fa-solid fa-trash"></i></div>
               </div>
-              <p class="item-price">200.00 ETB</p>
-              <div class="item-quantity">
-                <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                <span class="item-quantity-display">1</span>
-                <button class="plus fs-500"><i class="fa-solid fa-plus"></i></button>
-              </div>
-              <div class="delete-item fs-500"><i class="fa-solid fa-trash"></i></div>
-            </div>
-
-            <div class="selected-foods flex">
-              <div class="item-img">
-                <img src="./assets/food sample.jpg" alt="">
-              </div>
-              <div class="item-description">
-                <h4 class="item-title">Chicken Fries</h4>
-                <p class="ingredients">Lorem ipsum dolor sit amet.</p>
-              </div>
-              <p class="item-price">200.00 ETB</p>
-              <div class="item-quantity">
-                <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                <span class="item-quantity-display">1</span>
-                <button class="plus fs-500"><i class="fa-solid fa-plus"></i></button>
-              </div>
-              <div class="delete-item fs-500"><i class="fa-solid fa-trash"></i></div>
             </div>
             <div class="cart-result flex">
               <p class="total-quantity">Total number of foods: <span class="total-quantity-number">4</span></p>
@@ -207,19 +162,6 @@
             </div>
 
           </section>
-        </div>
-      </section>
-      <section id="order" class="grid-container grid-container-sections">
-        <h1 class="text-center header">Order Form</h1>
-        <form action="" class="form-block main-side flow">
-          <input type="text" name="" id="" placeholder="Name"/>
-          <input type="number" name="" id="" placeholder="Phone"/>
-          <input type="text" name="" id="" placeholder=""/>
-          <input type="text" name="" id="" />
-          <input type="submit" name="" id="" class="btn text-grey fs-500"/>
-        </form>
-        <div class="section-img">
-          <img src="./assets/foodSample.svg" alt="">
         </div>
       </section>
       <section id="reservation" class="grid-container grid-container-sections">
