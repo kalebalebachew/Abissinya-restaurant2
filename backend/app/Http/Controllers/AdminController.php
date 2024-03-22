@@ -72,7 +72,8 @@ class AdminController extends Controller
 
     $menu->save();
 
-    // Return the saved menu item in the response
+
+  
     return response()->json([
         'success' => 'food created successfully' ,
         'food_name' => $menu->food_name,

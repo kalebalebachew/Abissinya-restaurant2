@@ -19,14 +19,15 @@ class OrdersController extends Controller
             'food_name' => 'required',
         ]);
 
-        // Retrieve the menu item based on the provided food name
+        
+       
         $menuItem = menu::where('food_name', $validatedData['food_name'])->first();
 
         if (!$menuItem) {
             return response()->json(['error' => 'Menu item not found'], 404);
         }
 
-        // Create a new order record
+     
         $order = new orders();
         $order->food_name = $validatedData['food_name'];
         $order->day = $validatedData['day'];
