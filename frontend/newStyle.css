@@ -100,6 +100,7 @@ img {
 body {
   min-height: 100vh;
   font-family: var(--ff-primary);
+  background: rgb(0, 0, 0, .5);
 }
 .text-center {
   text-align: center;
@@ -240,43 +241,43 @@ input[type="submit"]{
   display: none;
 }
 #cart{
-  outline:2px solid blue;
-  width: 80%;
-  padding-block: 2rem;
+  width: 20%;
+  padding-block: .5rem;
   position: fixed;
-  top:15%;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: scroll;
+  top:10%;
+  right:1%;
+  z-index: 10;
+  background-color: antiquewhite;
+  white-space: nowrap;
 }
 .item-img{
   width: 12rem;
   border-radius: 50%;
   overflow: hidden;
 }
-.item-description{
-  --flow-space:.8rem;
-}
 .selected-foods{
   justify-content: space-between;
   align-items: center;
   padding-inline: 5%;
-  border-bottom: .2rem solid hsl(var(--clr-black));
+  border-bottom: .1rem solid hsl(var(--clr-black));
   padding-block: 1rem;
-  outline:2px solid rgb(255, 51, 0);
 }
 .cart-result{
   flex-direction: column;
   align-items: end;
   padding-inline: 5%;
-  --gap: 1rem;
+  --gap: 0;
 }
 .open-close{
   position: absolute;
-  top: 0;
+  top: .5rem;
   right:2%;
 }
 .btn-popUp{
   border: none;
   background: none;
+  cursor: pointer;
+}
+.delete-item{
   cursor: pointer;
 }
