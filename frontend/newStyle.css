@@ -178,12 +178,15 @@ ul li {
 .menu-intro{
   height: clamp(6rem, 3rem + 15vh, 15rem);
   position: relative;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     45deg,
     hsl(var(--clr-black)),
     hsl(var(--clr-golden))
-  );
+  ); */
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  background: url("./assets/burger-menu-backgroud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .menu-title{
   position: absolute;
