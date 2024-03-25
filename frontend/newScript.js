@@ -5,6 +5,7 @@ downArrow.forEach(arrow => {
         let parent = this.parentNode
         let currentMenu = parent.nextElementSibling
         currentMenu.classList.toggle('invisible');
+        this.classList.toggle('up-down')
     })
 });
 
@@ -45,6 +46,9 @@ function addOne(index) {
     updateCart()
 }
 function minusOne(index) {
+    if (cartItems[index].quantity === 1){
+        removeItem(index);
+    }
     cartItems[index].quantity --;
     updateCart()
 }
