@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        
-
-         \App\Models\Admin::factory()->create([
-            'username' => 'kaleb',
-             'password' => '1234',
+        Admin::factory()->create([
+            'username' => env('ADMIN_USERNAME', 'admin'),
+            'password' => Hash::make(env('ADMIN_PASSWORD', 'password')),
         ]);
     }
 }
