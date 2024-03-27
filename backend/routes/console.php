@@ -19,7 +19,10 @@ use App\Models\History;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
+
 })->purpose('Display an inspiring quote');
+
+
 Artisan::command('move-expired', function(){
 
 
@@ -38,4 +41,4 @@ Artisan::command('move-expired', function(){
     }
 
     $this->info('Expired reservations and orders moved to history successfully.');
-});
+})->daily();
