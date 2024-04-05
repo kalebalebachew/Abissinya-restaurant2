@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 
 //-------------------Admin Requests--------------------------
 axios.get('api/index')

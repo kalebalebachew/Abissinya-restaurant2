@@ -23,6 +23,8 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 
+
+
 Artisan::command('move-expired', function(){
 
 
@@ -40,5 +42,8 @@ Artisan::command('move-expired', function(){
         $order->delete();
     }
 
+
+    
+
     $this->info('Expired reservations and orders moved to history successfully.');
-})->daily();
+});

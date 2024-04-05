@@ -23,6 +23,7 @@ use App\Http\Controllers\MenuController;
 
 
 
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::get('/index', [AdminController::class, 'index']);

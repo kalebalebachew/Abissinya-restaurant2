@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ReservationsController;
+use App\Http\Controllers\AdminController;
+
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +20,8 @@ use Illuminate\Support\Facades\DB;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/conn', function () {
-    try {
-        DB::connection()->getPdo();
-        return "MySQL database is connected!";
-    } catch (\Exception $e) {
-        return "Failed to connect to MySQL database: " . $e->getMessage();
-    }
-});
+
+
 
 Route::get('/', function () {
     return view('welcome');

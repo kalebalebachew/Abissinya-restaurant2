@@ -6,15 +6,29 @@ use App\Models\menu;
 use App\Models\orders;
 use App\Models\reservations;
 use Illuminate\Http\Request;
+
+
+
+
+
 use Illuminate\Support\Facades\Auth;
+
 
 class AdminController extends Controller
 {
+
+
+ 
+    public function showLogin (Request $request){
+
+
+    return view('admin.login');
+        
+
+    }
     
     //Admin Login
-   
-   
-    public function adminLogin(Request $request)
+   public function adminLogin(Request $request)
 {
     $fields = $request->validate([
         'username' => 'required|string',
@@ -75,6 +89,7 @@ class AdminController extends Controller
 
   
     return response()->json([
+
         'success' => 'food created successfully' ,
         'food_name' => $menu->food_name,
         'price' => $menu->price,

@@ -1,3 +1,29 @@
+
+const axios = require('axios')
+
+
+let url = 'http://localhost:8000'
+
+axios.get('/')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Menu List Functionality
 let downArrow = document.querySelectorAll('.down-arrow');
 downArrow.forEach(arrow => {
