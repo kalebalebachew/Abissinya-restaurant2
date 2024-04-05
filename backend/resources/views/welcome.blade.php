@@ -32,22 +32,22 @@
                     <a
                         href="#about"
                         class="hover:text-primary transition duration-300 font-medium text-white"
-                        >About</a
+                        >about</a
                     >
                     <a
                         href="#menu"
                         class="hover:text-primary transition duration-300 font-medium text-white"
-                        >Menu</a
+                        >menu</a
                     >
                     <a
                         href="#reservation"
                         class="hover:text-primary transition duration-300 font-medium text-white"
-                        >Reservation</a
+                        >reservation</a
                     >
                     <a
                         href="#contact-us"
                         class="hover:text-primary transition duration-300 font-medium text-white"
-                        >Contact US</a
+                        >contact us</a
                     >
                 </nav>
                 <div
