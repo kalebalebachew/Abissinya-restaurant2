@@ -12,9 +12,10 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
             <script src="./js/index.js" defer></script>
-        <title>Restaurant Template</title>
+        <title>Abissinya-Resturnat</title>
         @vite('resources/css/app.css')
         @vite('resources/js/app.js')
+        
     </head>
     <body class="min-h-screen font-poppins relative bg-tertiary">
         <header class="absolute top-0 w-full">
@@ -49,10 +50,11 @@
                         class="hover:text-primary transition duration-300 font-medium text-white"
                         >contact us</a
                     >
+                    
                 </nav>
                 <div
                     class="flex items-center sm:space-x-4 text-4xl sm:text-3xl font-medium bg-primary text-white p-4 sm:p-2 fixed sm:static bottom-6 right-6 rounded-full sm:rounded-none">
-                    <h2 class="sm:block hidden">Cart</h2>
+                    <h2 class="sm:block hidden">cart</h2>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
                 <button class="lg:hidden">
@@ -184,27 +186,24 @@
                         </button>
                     </div>
                     <div class="grid mt-16">
-                        <div id="displayed-food" class="sm:hidden flex items-center">
+                        @foreach ($formattedMenu as $foodItem)
+                          <div id="displayed-food" class="sm:hidden flex items-center">
                             <i class="fa-solid fa-angles-left text-primary text-4xl sm:hidden" id="prevBtn"></i>
-                            <article
-                            class="flex flex-col gap-y-4 p-4 bg-tertiary">
-                            <img
-                                src="https://assets.website-files.com/63d61449103cc0c595394427/63f04b09848cba5f1e062951_garlic-shrimp-spaghetti.png"
-                                alt="" />
-                            <h2 class="text-white text-xl">
-                                Garlic Shrimp Spaghetti
-                            </h2>
-                            <p class="text-secondary">
-                                Rice Spagherri, Latus, Shrimp, Onion Lemon,
-                                Garlic, Coriander
-                            </p>
-                            <div class="flex justify-between border-t pt-4">
-                                <p class="text-white">200.00 ETB</p>
+                      
+                            <article class="flex flex-col gap-y-4 p-4 bg-tertiary">
+                              <img :src="foodItem.image" alt="" />
+                              <h2 class="text-white text-xl">@{{ foodItem.food_name }}</h2>
+                           
+                              <div class="flex justify-between border-t pt-4">
+                                <p class="text-white">@{{ foodItem.price }} ETB</p>
                                 <button>
-                                    <i
-                                        class="fa-solid fa-cart-shopping text-white"></i>
+                                  <i class="fa-solid fa-cart-shopping text-white"></i>
                                 </button>
-                            </div>
+                              </div>
+                            </article>
+                          </div>
+                        @endforeach
+                      </div>
                             
                         </article>
                         <i class="fa-solid fa-angles-right  text-4xl text-primary sm:hidden" id="nextBtn"></i>

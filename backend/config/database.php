@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlsrv'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +34,18 @@ return [
     */
 
     'connections' => [
+
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST', 'kaleb.database.windows.net'),
+            'port' => env('DB_PORT', '1433'),
+            'database' => env('DB_DATABASE', 'your_database'),
+            'username' => env('DB_USERNAME', 'your_username'),
+            'password' => env('DB_PASSWORD', 'your_password'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',

@@ -11,6 +11,7 @@ class OrdersController extends Controller
     public function placeOrder(Request $request)
     {
         
+        
         $validatedData = $request->validate([
             'day' => 'required',
             'name' => 'required',
