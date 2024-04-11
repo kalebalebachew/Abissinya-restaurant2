@@ -20,17 +20,26 @@ use App\Http\Controllers\MenuController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::get('/index', [AdminController::class, 'index']);
+    
     Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
     Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
     Route::delete('/delete-menu/{food_id}', [AdminController::class, 'deleteMenuItem']);
-
-    });
-
+});
 Route::post('/login', [AdminController::class, 'adminLogin']);
 
+
+Route::get('/adminlogin', function(){
+
+    return view('login');
+});
+Route::get('/dashboard',function (){
+
+    return view('admin');
+});
 
 
 
@@ -41,10 +50,6 @@ Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::get('/', [HomeController::class, 'showMenu']);
+
 

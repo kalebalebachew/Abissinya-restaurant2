@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
     const toggleBtn = document.getElementById("toggleBtn");
     const mobileNav = document.getElementById("mobileNav");
     const icon = document.getElementById("icon");
@@ -27,4 +27,3 @@ document.addEventListener("DOMContentLoaded", function () {
             icon.classList.toggle("fa-times");
         });
     });
-});

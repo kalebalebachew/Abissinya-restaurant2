@@ -13,10 +13,10 @@ class ReservationsController extends Controller
 
         $validatedData = $request->validate([
 
-            'customer_name' => 'required',
-            'customer_phone' => 'required',
-            'day' => 'required',
-            'table_number' => 'required',
+            'customer_name' => 'required|string',
+            'customer_phone' => 'required|string',
+            'day' => 'required|string',
+            'table_number' => 'required|string',
           
 
         ]);
