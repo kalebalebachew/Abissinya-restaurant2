@@ -24,20 +24,20 @@
         <section id="desktop-menu" class="sm:w-4/5 mx-auto flex justify-between sm:p-4 items-center sticky top-0">
             <div class="flex items-center">
                 <img src="./images/abyssinia-favicon-black.png" alt="" class="w-20" />
-                <h1 class="text-4xl text-primary">አቢሲኒያ</h1>
+               <a href = "#home"><<h1  class="text-4xl text-primary">አቢሲኒያ</h1></a> 
             </div>
-            <nav id="mobileNav" class="lg:text-2xl lg:block space-x-8 sml:page-navigation sm:hidden"
+            <nav id="mobileNav" class="lg:text-2xl lg:block space-x-12 sml:page-navigation sm:hidden"
                 data-visible="false">
                 <a href="#home"
-                    class="hover:text-primary transition duration-300 text-secondary sm:hidden  links">Home</a>
+                    class="hover:text-primary transition duration-300 text-white sm:hidden  links">Home</a>
                 <a href="#about"
-                    class="hover:text-primary transition duration-300 text-secondary links">about</a>
+                    class="hover:text-primary transition duration-300 text-white links">about</a>
                 <a links href="#menu"
-                    class="hover:text-primary transition duration-300 text-secondary links">menu</a>
+                    class="hover:text-primary transition duration-300 text-white links">menu</a>
                 <a href="#reservation"
-                    class="hover:text-primary transition duration-300 text-secondary links">reservation</a>
+                    class="hover:text-primary transition duration-300 text-white links">reservation</a>
                 <a href="#contact-us"
-                    class="hover:text-primary transition duration-300 text-secondary links">contact us</a>
+                    class="hover:text-primary transition duration-300 text-white links">contact us</a>
             </nav>
             <div id="cartButton"
                 class="flex items-center sm:space-x-4 text-4xl sm:text-3xl font-medium  text-primary p-4 sm:p-2 fixed sm:static bottom-6 right-6 rounded-full sm:rounded-none">
@@ -62,14 +62,18 @@
                         where tradition meets culinary excellence.
                     </h2>
                     <div class="flex space-x-8">
+                        <a href = "#menu">
                         <button
                             class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
                             Order Now
                         </button>
+                    </a>
+                    <a href = "#reservation">
                         <button
                             class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
                             Book a Table
                         </button>
+                    </a>
                     </div>
                 </article>
             </div>
@@ -119,10 +123,10 @@
                         <ul class="space-y-8 list-disc list-inside marker:text-primary marker:text-3xl pl-4">
                             <li>
                                 <h3 class="text-white text-2xl mb-4 font-medium inline-block">
-                                    Our Journey from 2002
+                                    our journey from 2002
                                 </h3>
                                 <p class="text-white">
-                                    Abyssinia is Started at
+                                    abissinya is started at
                                     <span class="text-primary">2019</span>
                                     of the most popular Restaurant & special
                                     menu made by our passionate chefs very
@@ -132,7 +136,7 @@
                             </li>
                             <li>
                                 <h3 class="text-white text-2xl mb-4 font-medium inline-block">
-                                    Awards we Wins
+                                    Awards we've won
                                 </h3>
                                 <p class="text-white">
                                     Raising Star Restaurant Award at
@@ -196,7 +200,7 @@
                                         {{ $menuItem['food_name'] }}
                                     </h2>
                                     <p class="text-secondary">
-                                        "Rice Spagherri, Latus, Shrimp, Onion Lemon, Garlic, Coriander"
+                                        Pieces of injera mixed with lamb, slow cooked with mild sauce and spiced butter
                                     </p>
                                     <div
                                         class="flex justify-between border-t pt-4">
@@ -221,7 +225,7 @@
                                     {{ $menuItem['food_name'] }}
                                 </h2>
                                 <p class="text-secondary">
-                                    Rice Spagherri, Latus, Shrimp, Onion Lemon, Garlic, Coriander
+                                    Pieces of injera mixed with lamb, slow cooked with mild sauce and spiced butter
                                 </p>
                                 <div class="flex justify-between border-t pt-4">
                                     <p class="text-white"> <span class="it-price">{{ $menuItem['price'] }}</span> ETB
