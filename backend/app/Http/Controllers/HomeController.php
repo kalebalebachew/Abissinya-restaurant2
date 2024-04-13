@@ -11,6 +11,8 @@ class HomeController extends Controller
     public function showMenu(Request $request)
     {
         $menu = Menu::all();
+
+        
         // dd($menu);
 
         // $Menu = [];

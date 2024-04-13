@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <title>Restaurant Template</title>
     @vite('css/output.css')
@@ -29,13 +31,13 @@
                 <a href="#home"
                     class="hover:text-primary transition duration-300 text-secondary sm:hidden  links">Home</a>
                 <a href="#about"
-                    class="hover:text-primary transition duration-300 text-secondary links">About</a>
+                    class="hover:text-primary transition duration-300 text-secondary links">about</a>
                 <a links href="#menu"
-                    class="hover:text-primary transition duration-300 text-secondary links">Menu</a>
+                    class="hover:text-primary transition duration-300 text-secondary links">menu</a>
                 <a href="#reservation"
-                    class="hover:text-primary transition duration-300 text-secondary links">Reservation</a>
+                    class="hover:text-primary transition duration-300 text-secondary links">reservation</a>
                 <a href="#contact-us"
-                    class="hover:text-primary transition duration-300 text-secondary links">Contact us</a>
+                    class="hover:text-primary transition duration-300 text-secondary links">contact us</a>
             </nav>
             <div id="cartButton"
                 class="flex items-center sm:space-x-4 text-4xl sm:text-3xl font-medium  text-primary p-4 sm:p-2 fixed sm:static bottom-6 right-6 rounded-full sm:rounded-none">
@@ -186,26 +188,27 @@
                     <div class="sm:hidden flex items-center px-4">
                         <i class="fa-solid fa-angles-left text-primary text-4xl sm:hidden" id="prevBtn"></i>
                         <div id="displayed-food">
-                            <!-- <article
+                            @foreach ($menu as $menuItem)
+                             <article
                                     class="flex flex-col gap-y-4 p-4 bg-tertiary">
                                     <img src="https://assets.website-files.com/63d61449103cc0c595394427/63f04a2cb50e555f9bdf6ea0_healthy-vegan-salad.png" alt="" />
-                                    <h2 class="text-white text-xl">
-                                        Healthy Vegan Salad
+                                    <h2 class="text-white text-xl it-name">
+                                        {{ $menuItem['food_name'] }}
                                     </h2>
                                     <p class="text-secondary">
                                         "Rice Spagherri, Latus, Shrimp, Onion Lemon, Garlic, Coriander"
                                     </p>
                                     <div
                                         class="flex justify-between border-t pt-4">
-                                        <p class="text-white">
-                                            112.85 ETB
+                                        <p class="text-white"> <span class="it-price">{{ $menuItem['price'] }}</span> ETB
                                         </p>
                                         <button>
                                             <i
                                                 class="fa-solid fa-cart-shopping text-white"></i>
                                         </button>
                                     </div>
-                                </article> -->
+                                </article> 
+                                @endforeach
                         </div>
                         <i class="fa-solid fa-angles-right text-4xl text-primary sm:hidden" id="nextBtn"></i>
                     </div>
