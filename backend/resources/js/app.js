@@ -212,19 +212,24 @@
 //     ],
 // };
 
-const nextBtn = document.querySelector("#nextBtn");
-const prevBtn = document.querySelector("#prevBtn");
+// const nextBtn = document.querySelector("#nextBtn");
+// const prevBtn = document.querySelector("#prevBtn");
 const displayedFood = document.querySelector("#displayed-food");
 
-let index = 0;
-let activeCatagory = "breakfast";
-let hasNext = index < foods[activeCatagory].length - 1;
-let hasPrev = index > 0;
+// let index = 0;
+// let activeCatagory = "breakfast";
+// let hasNext = index < foods[activeCatagory].length - 1;
+// let hasPrev = index > 0;
 
 const tabInit = document.querySelector('[aria-controls="breakfast"]');
 tabInit.classList.add("active");
-renderCategory("breakfast");
-mobileRender("breakfast");
+// renderCategory("breakfast");
+// mobileRender("breakfast");
+
+
+
+
+
 
 
 const tabs = document.querySelectorAll('[role="tab"]');
@@ -323,6 +328,15 @@ function renderCategory(category) {
     });
    
 }
+const addCartBtn = displayedFood.querySelector('.addToCart')
+addCartBtn.addEventListener('click', function(){
+    let itemPrice =
+                    this.parentElement.parentElement.querySelector(".it-price").textContent;
+                let itemName =
+                    this.parentElement.parentElement.querySelector(".it-name").textContent;
+                addItem(itemName, itemPrice);
+                updateCart();
+})
 nextBtn.addEventListener("click", handleNextClick);
 prevBtn.addEventListener("click", handlePrevClick);
 
@@ -339,7 +353,7 @@ function handlePrevClick() {
     }
 }
 
-const cartPage = document.querySelector("#cart");
+let cartPage = document.querySelector("#cart");
 let cartPageItems = document.querySelector(".selected-foods-only");
 let cartItems = [];
 let totalQuantityEle = document.querySelector(".total-quantity-number");
@@ -405,6 +419,19 @@ function updateCart() {
     totalQuantityEle.textContent = totalQuantity;
     totalPriceEle.textContent = totalPrice;
 }
+
+    function addToCart() {
+        var formData = new FormData(document.getElementById('addToCartForm'));
+
+        
+        axios.post('/addToCart', formData)
+            .then(response => {
+                alert('Item added to cart!');
+            })
+            .catch(error => {
+                console.error('Error adding item to cart:', error);
+            });
+    }
 
 
 

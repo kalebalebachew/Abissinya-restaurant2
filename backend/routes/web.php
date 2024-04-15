@@ -43,8 +43,8 @@ Route::get('/dashboard',function (){
 
 
 
-
-Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
+Route::post('/addtoCart',[HomeController::class, 'addToCart'])->name('addtoCart.addTocart');
+Route::post('/orders', [OrdersController::class, 'placeOrder'])->name('orders.placeOrder');
 Route::post('/reserve', [ReservationsController::class, 'reserveTable'])->name('reserve.reserveTable');
 
 Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);

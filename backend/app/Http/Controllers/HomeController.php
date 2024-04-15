@@ -13,7 +13,16 @@ class HomeController extends Controller
         $menu = Menu::all();
 
         
-   
+        // dd($menu);
+
+        // $Menu = [];
+        // foreach ($menu as $menuItem) {
+        //     $formattedMenu[] = [
+
+        //         'food_name' => $menuItem->food_name,
+        //         'price' => $menuItem->price,
+        //     ];
+        // }
 
         return view('home', compact('menu'));
     }
@@ -25,9 +34,10 @@ class HomeController extends Controller
         $cart = session('cart');
 
         $cart [] = [
-
+           
             'food_name' => $menu->food_name,
             'price' => $menu->price,
+            
             
 
 

@@ -77,6 +77,7 @@
                 </article>
             </div>
         </section>
+        
         <section id="cart"
             class="w-11/12 sm:w-4/6 lg:w-1/2 lg:right-8 lg:left-auto lg:transform-none fixed p-4 top-32 left-1/2 -translate-x-1/2 bg-tertiary hidden xl:w-1/3 2xl:w-1/4">
             <h2 class="text-2xl text-center text-white pb-4" a>Your Cart</h2>
@@ -250,49 +251,59 @@
                         <h2 class="text-white text-4xl font-medium sm:mb-12 sm:text-5xl mb-8">
                             Book & Enjoy with your private Table
                         </h2>
-                     
+
                         <form method="POST" action="{{ route('reserve.reserveTable') }}" class="space-y-8">
                             @csrf
-                        
+
                             <div class="grid grid-cols-2 gap-x-4 gap-y-8">
                                 <div>
-                                    <label for="customer_name" class="text-sm block font-medium text-white">Name</label>
-                                    <input type="text" name="customer_name" id="customer_name" placeholder="Enter your name" required
-                                           value="{{ old('customer_name') }}" class="p-4 placeholder:text-white bg-transparent border block w-full focus:border-none text-white" />
+                                    <label for="customer_name"
+                                        class="text-sm block font-medium text-white">Name</label>
+                                    <input type="text" name="customer_name" id="customer_name"
+                                        placeholder="Enter your name" required value="{{ old('customer_name') }}"
+                                        class="p-4 placeholder:text-white bg-transparent border block w-full focus:border-none text-white" />
                                 </div>
                                 <div>
-                                    <label for="customer_phone" class="text-sm block font-medium text-white">Phone Number</label>
-                                    <input type="tel" name="customer_phone" id="customer_phone" placeholder="Enter phone number" required
-                                           value="{{ old('customer_phone') }}" class="p-4 placeholder:text-white bg-transparent border block text-white" />
+                                    <label for="customer_phone" class="text-sm block font-medium text-white">Phone
+                                        Number</label>
+                                    <input type="tel" name="customer_phone" id="customer_phone"
+                                        placeholder="Enter phone number" required value="{{ old('customer_phone') }}"
+                                        class="p-4 placeholder:text-white bg-transparent border block text-white" />
                                 </div>
                             </div>
-                        
+
                             <div class="grid grid-cols-2 gap-x-4 gap-y-8">
                                 <div>
-                                    <label for="table_number" class="text-sm block font-medium text-white">No. of Guests</label>
-                                    <input type="number" name="table_number" id="table_number" min="1" placeholder="Number of guests" required
-                                           value="{{ old('table_number') }}" class="p-4 placeholder:text-white bg-transparent border block text-white" />
+                                    <label for="table_number" class="text-sm block font-medium text-white">No. of
+                                        Guests</label>
+                                    <input type="number" name="table_number" id="table_number" min="1"
+                                        placeholder="Number of guests" required value="{{ old('table_number') }}"
+                                        class="p-4 placeholder:text-white bg-transparent border block text-white" />
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="time" class="text-sm block font-medium text-white">Time</label>
-                                    <input type="text" name="time" id="time" placeholder="Enter time (e.g., 08:00 PM)" required
-                                           value="{{ old('time') }}" class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
+                                    <input type="text" name="time" id="time"
+                                        placeholder="Enter time (e.g., 08:00 PM)" required value="{{ old('time') }}"
+                                        class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
                                 </div>
                             </div>
-                        
+
                             <div class="grid grid-cols-2 gap-x-4 gap-y-8">
                                 <div class="flex flex-col">
                                     <label for="day" class="text-sm block font-medium text-white">Date</label>
-                                    <input type="text" name="day" id="day" placeholder="Enter date (e.g., 2024-04-20)" required
-                                           value="{{ old('day') }}" class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
+                                    <input type="text" name="day" id="day"
+                                        placeholder="Enter date (e.g., 2024-04-20)" required
+                                        value="{{ old('day') }}"
+                                        class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
                                 </div>
                             </div>
-                        
-                            <input type="submit" value="Book a Table" class="p-4 text-white bg-transparent border block hover:bg-primary" />
+
+                            <input type="submit" value="Book a Table"
+                                class="p-4 text-white bg-transparent border block hover:bg-primary" />
                         </form>
-                        
-                        
-                       
+
+
+
                     </div>
                     <div class="p-4 flex justify-end">
                         <img src="https://www.svgrepo.com/show/43182/restaurant-menu.svg"

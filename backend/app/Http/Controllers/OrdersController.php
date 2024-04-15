@@ -40,7 +40,7 @@ class OrdersController extends Controller
 
         $order->save();
 
-        return response()->json(['success' => true, 'order' => $order]);
+        return redirect('home')->with('message', 'ordered');
     }
 }
 
