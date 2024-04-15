@@ -931,6 +931,22 @@ video {
   background-image: url('https://assets.website-files.com/63d0c13bf294b9ad2ad7a1f0/63fdd32ee2d30bbe08d0e085_contact-bg-1.jpg');
 }
 
+.bg-\[url\(\'https\:\/\/www\.google\.com\/url\?sa\=i\&url\=https\%3A\%2F\%2Fwww\.freepik\.com\%2Ffree-photos-vectors\%2Fdark-website-background\&psig\=AOvVaw0OI-kY7SSH0U-N5emhp_P-\&ust\=1713112901511000\&source\=images\&cd\=vfe\&opi\=89978449\&ved\=0CBIQjRxqFwoTCOj-uYLRv4UDFQAAAAAdAAAAABAE\'\)\] {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fdark-website-background&psig=AOvVaw0OI-kY7SSH0U-N5emhp_P-&ust=1713112901511000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOj-uYLRv4UDFQAAAAAdAAAAABAE');
+}
+
+.bg-\[url\(\'https\:\/\/i\.pinimg\.com\/564x\/e8\/dd\/5d\/e8dd5d0434b0ba7a63e930bc5e2d53fa\.jpg\'\)\] {
+  background-image: url('https://i.pinimg.com/564x/e8/dd/5d/e8dd5d0434b0ba7a63e930bc5e2d53fa.jpg');
+}
+
+.bg-\[url\(\'https\:\/\/www\.google\.com\/url\?sa\=i\&url\=https\%3A\%2F\%2Fjournalstar\.com\%2Fnews\%2Flocal\%2Fdining-out-in-lincoln-tirus-ethiopian-fare-will-wow-you-with-the-colorful-presentation\%2Farticle_affc39a8-fc1b-574d-80de-eaf8f03bbd46\.html\&psig\=AOvVaw3kskRL5PQeX4vz5t77ne_c\&ust\=1713113110058000\&source\=images\&cd\=vfe\&opi\=89978449\&ved\=0CBIQjRxqFwoTCLDB5OfRv4UDFQAAAAAdAAAAABAR\'\)\] {
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fjournalstar.com%2Fnews%2Flocal%2Fdining-out-in-lincoln-tirus-ethiopian-fare-will-wow-you-with-the-colorful-presentation%2Farticle_affc39a8-fc1b-574d-80de-eaf8f03bbd46.html&psig=AOvVaw3kskRL5PQeX4vz5t77ne_c&ust=1713113110058000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDB5OfRv4UDFQAAAAAdAAAAABAR');
+}
+
+.bg-\[url\(\'https\:\/\/images\.app\.goo\.gl\/inmbEvGpnZbSmize7\'\)\] {
+  background-image: url('https://images.app.goo.gl/inmbEvGpnZbSmize7');
+}
+
 .bg-cover {
   background-size: cover;
 }

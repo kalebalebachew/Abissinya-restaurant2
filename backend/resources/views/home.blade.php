@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
 
-    <title>Restaurant Template</title>
+    <title>abissinya restaurant</title>
     @vite('css/output.css')
     @vite('resources/js/app.js')
     @vite('resources/js/script.js')
@@ -24,20 +24,19 @@
         <section id="desktop-menu" class="sm:w-4/5 mx-auto flex justify-between sm:p-4 items-center sticky top-0">
             <div class="flex items-center">
                 <img src="./images/abyssinia-favicon-black.png" alt="" class="w-20" />
-               <a href = "#home"><<h1  class="text-4xl text-primary">አቢሲኒያ</h1></a> 
+                <a href = "#home">
+                    <<h1 class="text-4xl text-primary">አቢሲኒያ</h1>
+                </a>
             </div>
             <nav id="mobileNav" class="lg:text-2xl lg:block space-x-12 sml:page-navigation sm:hidden"
                 data-visible="false">
                 <a href="#home"
                     class="hover:text-primary transition duration-300 text-white sm:hidden  links">Home</a>
-                <a href="#about"
-                    class="hover:text-primary transition duration-300 text-white links">about</a>
-                <a links href="#menu"
-                    class="hover:text-primary transition duration-300 text-white links">menu</a>
+                <a href="#about" class="hover:text-primary transition duration-300 text-white links">about</a>
+                <a links href="#menu" class="hover:text-primary transition duration-300 text-white links">menu</a>
                 <a href="#reservation"
                     class="hover:text-primary transition duration-300 text-white links">reservation</a>
-                <a href="#contact-us"
-                    class="hover:text-primary transition duration-300 text-white links">contact us</a>
+                <a href="#contact-us" class="hover:text-primary transition duration-300 text-white links">contact us</a>
             </nav>
             <div id="cartButton"
                 class="flex items-center sm:space-x-4 text-4xl sm:text-3xl font-medium  text-primary p-4 sm:p-2 fixed sm:static bottom-6 right-6 rounded-full sm:rounded-none">
@@ -63,17 +62,17 @@
                     </h2>
                     <div class="flex space-x-8">
                         <a href = "#menu">
-                        <button
-                            class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
-                            Order Now
-                        </button>
-                    </a>
-                    <a href = "#reservation">
-                        <button
-                            class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
-                            Book a Table
-                        </button>
-                    </a>
+                            <button
+                                class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
+                                Order Now
+                            </button>
+                        </a>
+                        <a href = "#reservation">
+                            <button
+                                class="text-xl text-white border py-4 px-6 hover:bg-primary bg-transparent border-white transition duration-300 hover:-translate-y-2 hover:border-primary whitespace-nowrap">
+                                Book a Table
+                            </button>
+                        </a>
                     </div>
                 </article>
             </div>
@@ -193,26 +192,25 @@
                         <i class="fa-solid fa-angles-left text-primary text-4xl sm:hidden" id="prevBtn"></i>
                         <div id="displayed-food">
                             @foreach ($menu as $menuItem)
-                             <article
-                                    class="flex flex-col gap-y-4 p-4 bg-tertiary">
-                                    <img src="https://assets.website-files.com/63d61449103cc0c595394427/63f04a2cb50e555f9bdf6ea0_healthy-vegan-salad.png" alt="" />
+                                <article class="flex flex-col gap-y-4 p-4 bg-tertiary">
+                                    <img src="https://assets.website-files.com/63d61449103cc0c595394427/63f04a2cb50e555f9bdf6ea0_healthy-vegan-salad.png"
+                                        alt="" />
                                     <h2 class="text-white text-xl it-name">
                                         {{ $menuItem['food_name'] }}
                                     </h2>
                                     <p class="text-secondary">
                                         Pieces of injera mixed with lamb, slow cooked with mild sauce and spiced butter
                                     </p>
-                                    <div
-                                        class="flex justify-between border-t pt-4">
-                                        <p class="text-white"> <span class="it-price">{{ $menuItem['price'] }}</span> ETB
+                                    <div class="flex justify-between border-t pt-4">
+                                        <p class="text-white"> <span class="it-price">{{ $menuItem['price'] }}</span>
+                                            ETB
                                         </p>
                                         <button>
-                                            <i
-                                                class="fa-solid fa-cart-shopping text-white"></i>
+                                            <i class="fa-solid fa-cart-shopping text-white"></i>
                                         </button>
                                     </div>
-                                </article> 
-                                @endforeach
+                                </article>
+                            @endforeach
                         </div>
                         <i class="fa-solid fa-angles-right text-4xl text-primary sm:hidden" id="nextBtn"></i>
                     </div>
@@ -220,7 +218,8 @@
                         id="food-container">
                         @foreach ($menu as $menuItem)
                             <article class="flex flex-col gap-y-4 p-4 bg-tertiary">
-                                <img src="https://assets.website-files.com/63d61449103cc0c595394427/63eda38e387ec16504f371ed_italian-shrimp-pasta.png" alt="Food Photo" />
+                                <img src="https://assets.website-files.com/63d61449103cc0c595394427/63eda38e387ec16504f371ed_italian-shrimp-pasta.png"
+                                    alt="Food Photo" />
                                 <h2 class="text-white text-xl it-name">
                                     {{ $menuItem['food_name'] }}
                                 </h2>
@@ -251,28 +250,52 @@
                         <h2 class="text-white text-4xl font-medium sm:mb-12 sm:text-5xl mb-8">
                             Book & Enjoy with your private Table
                         </h2>
-                        <form action="" class="space-y-8">
-                            <input type="text" placeholder="Name" required
-                                class="p-4 placeholder:text-white bg-transparent border block w-full focus:border-none text-white" />
-
+                     
+                        <form method="POST" action="{{ route('reserve.reserveTable') }}" class="space-y-8">
+                            @csrf
+                        
                             <div class="grid grid-cols-2 gap-x-4 gap-y-8">
-                                <input type="tel" name="" id="" placeholder="Phone"
-                                    class="p-4 placeholder:text-white bg-transparent border block text-white" />
-                                <input type="number" name="" id="" placeholder="No. of Guests"
-                                    class="p-4 placeholder:text-white bg-transparent border block text-white" />
-                                <input type="text" name="" id="" placeholder="Time"
-                                    class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
-                                <input type="text" name="" id="" placeholder="Date"
-                                    class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
+                                <div>
+                                    <label for="customer_name" class="text-sm block font-medium text-white">Name</label>
+                                    <input type="text" name="customer_name" id="customer_name" placeholder="Enter your name" required
+                                           value="{{ old('customer_name') }}" class="p-4 placeholder:text-white bg-transparent border block w-full focus:border-none text-white" />
+                                </div>
+                                <div>
+                                    <label for="customer_phone" class="text-sm block font-medium text-white">Phone Number</label>
+                                    <input type="tel" name="customer_phone" id="customer_phone" placeholder="Enter phone number" required
+                                           value="{{ old('customer_phone') }}" class="p-4 placeholder:text-white bg-transparent border block text-white" />
+                                </div>
                             </div>
-                            <textarea name="" id="" placeholder="Special Notes"
-                                class="p-4 placeholder:text-white bg-transparent border block w-full h-40 text-white"></textarea>
-                            <input type="submit" value="Book a Table"
-                                class="p-4 text-white bg-transparent border block hover:bg-primary" />
+                        
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-8">
+                                <div>
+                                    <label for="table_number" class="text-sm block font-medium text-white">No. of Guests</label>
+                                    <input type="number" name="table_number" id="table_number" min="1" placeholder="Number of guests" required
+                                           value="{{ old('table_number') }}" class="p-4 placeholder:text-white bg-transparent border block text-white" />
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="time" class="text-sm block font-medium text-white">Time</label>
+                                    <input type="text" name="time" id="time" placeholder="Enter time (e.g., 08:00 PM)" required
+                                           value="{{ old('time') }}" class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
+                                </div>
+                            </div>
+                        
+                            <div class="grid grid-cols-2 gap-x-4 gap-y-8">
+                                <div class="flex flex-col">
+                                    <label for="day" class="text-sm block font-medium text-white">Date</label>
+                                    <input type="text" name="day" id="day" placeholder="Enter date (e.g., 2024-04-20)" required
+                                           value="{{ old('day') }}" class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
+                                </div>
+                            </div>
+                        
+                            <input type="submit" value="Book a Table" class="p-4 text-white bg-transparent border block hover:bg-primary" />
                         </form>
+                        
+                        
+                       
                     </div>
                     <div class="p-4 flex justify-end">
-                        <img src="https://assets.website-files.com/63d0c13bf294b9ad2ad7a1f0/63f9f4d7fb4697d9922c4ab3_breakfast-banner.jpg"
+                        <img src="https://www.svgrepo.com/show/43182/restaurant-menu.svg"
                             alt="picture of booked table" class="hidden md:block" />
                     </div>
                 </div>

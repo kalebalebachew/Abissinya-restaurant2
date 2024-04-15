@@ -45,7 +45,8 @@ Route::get('/dashboard',function (){
 
 
 Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
-Route::post('/reserve', [ReservationsController::class, 'reserveTable']);
+Route::post('/reserve', [ReservationsController::class, 'reserveTable'])->name('reserve.reserveTable');
+
 Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);
 
 
