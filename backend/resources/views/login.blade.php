@@ -24,13 +24,16 @@
             </div>
           <h2 class="mt-10 text-center text-2xl font-medium leading-9 tracking-tight text-gray-900">Sign in to your admin account</h2>
         </div>
-      
+        
+        
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form class="space-y-6" action="#" method="POST">
+          <form class="space-y-6" method="POST" action="{{ route('login') }}">
+
+            @csrf
             <div>
-              <label for="email" class="block text-gray-900 font-medium">Email address</label>
+              <label for="username" class="block text-gray-900 font-medium">username</label>
               <div class="mt-2">
-                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus-visible:outline-none focus:ring-emerald-600 ring-gray-300 ring-2">
+                <input  required value="{{ old('username') }}" id="username" name="username" type="username" autocomplete="username" required class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus-visible:outline-none focus:ring-emerald-600 ring-gray-300 ring-2">
               </div>
             </div>
             <div>
@@ -38,7 +41,7 @@
                 <label for="password" class="block font-medium leading-6 text-gray-900">Password</label>
               </div>
               <div class="mt-2">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus-visible:outline-none focus:ring-emerald-600 ring-gray-300 ring-2">
+                <input  required value="{{ old('password') }}" id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 focus-visible:outline-none focus:ring-emerald-600 ring-gray-300 ring-2">
               </div>
             </div>
             <div >

@@ -13,7 +13,7 @@ export default {
           tertiary: '#03171E'
         },
         fontFamily:{
-          poppins: ["Nunito, sans-serif"]
+          poppins: ["poppins, sans-serif"]
         },
         backgroundImage:{
           homeBg: 'url("https://assets.website-files.com/63d0c13bf294b9ad2ad7a1f0/63fc8f011df7042b653ee41c_hero-image-1-1.jpg")'
@@ -23,6 +23,13 @@ export default {
         },
         screens:{
           sml: {'max': '639px'}
+        },
+        width:{
+          hor_wid: 'calc(100% - 288px)',
+          hor_sm_wid: 'width: calc(100% - 60px)'
+        },
+        gridTemplateColumns:{
+          colums: 'repeat(auto-fit, minmax(240px, 1fr))'
         }
       },
     },

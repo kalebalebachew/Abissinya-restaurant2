@@ -20,23 +20,24 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+
+Route::get('/login', [AdminController::class, 'showLogin'])->name('showLogin');
+Route::post('/login', [AdminController::class, 'adminLogin'])->name('login');
+
+
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    
+
+   
+    Route::get('/dashboard',[AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/index', [AdminController::class, 'index']);
-    Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
+   
+   
+    Route::post('/addMenu', [AdminController::class, 'addMenu'])->name('addMenu');
     Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
     Route::delete('/delete-menu/{food_id}', [AdminController::class, 'deleteMenuItem']);
-
-    });
-
-Route::post('/login', [AdminController::class, 'adminLogin']);
-
-
-
-Route::post('/orders/place', [OrdersController::class, 'placeOrder']);
-Route::post('/reserve', [ReservationsController::class, 'reserveTable']);
-Route::get('/search/{food_name}', [MenuController::class, 'searchMenuItem']);
-
+});
 
 
 

@@ -21,25 +21,21 @@ use App\Http\Controllers\MenuController;
 |
 */
 
+Route::get('/login', [AdminController::class, 'showLogin'])->name('showLogin');
+Route::post('/login', [AdminController::class, 'adminLogin'])->name('login');
+
+
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    
+
+   
+    Route::get('/dashboard',[AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/index', [AdminController::class, 'index']);
-    
-    Route::post('/add-menu', [AdminController::class, 'addMenuItem']);
+    Route::post('/addMenu', [AdminController::class, 'addMenu'])->name('addMenu');
     Route::put('/update-menu/{food_id}', [AdminController::class, 'updateMenuItem']);
     Route::delete('/delete-menu/{food_id}', [AdminController::class, 'deleteMenuItem']);
 });
-Route::post('/login', [AdminController::class, 'adminLogin']);
 
-
-Route::get('/adminlogin', function(){
-
-    return view('login');
-});
-Route::get('/dashboard',function (){
-
-    return view('admin');
-});
 
 
 

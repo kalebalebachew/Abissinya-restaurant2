@@ -8,6 +8,8 @@ use App\Models\menu;
 
 class OrdersController extends Controller
 {
+
+    
     public function placeOrder(Request $request)
     
     {
