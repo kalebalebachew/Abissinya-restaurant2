@@ -268,7 +268,6 @@
         <form action="{{ route('addMenu') }}" id="order" class="flex flex-col space-y-4" method="POST">
             @csrf
 
-            <input type="hidden" name="token" value="{{ $token }}">
         
             
             <input type="text" name="food_name" id="food_name" placeholder="Name" value="{{ old('food_name') }}"

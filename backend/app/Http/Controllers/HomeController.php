@@ -10,21 +10,11 @@ class HomeController extends Controller
 
     public function showMenu(Request $request)
     {
-        $menu = Menu::all();
+        $menu = Menu::paginate(8);
 
-        
-        // dd($menu);
+  
 
-        // $Menu = [];
-        // foreach ($menu as $menuItem) {
-        //     $formattedMenu[] = [
-
-        //         'food_name' => $menuItem->food_name,
-        //         'price' => $menuItem->price,
-        //     ];
-        // }
-
-        return view('home', compact('menu'));
+        return view('welcome', compact('menu'));
     }
 
     public function addToCart(Request $request)

@@ -34,3 +34,20 @@ tabs.forEach((tab) => {
         
     });
 });
+
+
+
+
+document.getElementById('order').addEventListener('submit', async (event) => {
+   
+	const response = await fetch('/api/addMenu', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${window.token}` 
+		},
+		body: JSON.stringify({
+			food_name: document.getElementById('food_name').value,
+			price: document.getElementById('price').value
+		})
+	});});

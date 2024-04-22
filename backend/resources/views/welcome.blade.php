@@ -283,7 +283,7 @@
                                 <div class="flex flex-col">
                                     <label for="time" class="text-sm block font-medium text-white">Time</label>
                                     <input type="text" name="time" id="time"
-                                        placeholder="Enter time (e.g., 08:00 PM)" required value="{{ old('time') }}"
+                                        placeholder="Enter time " required value="{{ old('time') }}"
                                         class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                                 <div class="flex flex-col">
                                     <label for="day" class="text-sm block font-medium text-white">Date</label>
                                     <input type="text" name="day" id="day"
-                                        placeholder="Enter date (e.g., 2024-04-20)" required
+                                        placeholder="Enter date " required
                                         value="{{ old('day') }}"
                                         class="p-4 placeholder:text-white border block w-full bg-transparent text-white" />
                                 </div>

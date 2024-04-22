@@ -1,37 +1,21 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-      "./resources/**/*.blade.php",
-      "./resources/**/*.js",
-      "./resources/**/*.vue",
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
     ],
+
     theme: {
-      extend: {
-        colors:{
-          primary: '#FF8700',
-          secondary: '#d6d6d6',
-          tertiary: '#03171E'
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
         },
-        fontFamily:{
-          poppins: ["poppins, sans-serif"]
-        },
-        backgroundImage:{
-          homeBg: 'url("https://assets.website-files.com/63d0c13bf294b9ad2ad7a1f0/63fc8f011df7042b653ee41c_hero-image-1-1.jpg")'
-        },
-        spacing:{
-          min_vh: 'min(10rem, 20vh) 4rem'
-        },
-        screens:{
-          sml: {'max': '639px'}
-        },
-        width:{
-          hor_wid: 'calc(100% - 288px)',
-          hor_sm_wid: 'width: calc(100% - 60px)'
-        },
-        gridTemplateColumns:{
-          colums: 'repeat(auto-fit, minmax(240px, 1fr))'
-        }
-      },
     },
-    plugins: [],
-  }
+
+    plugins: [forms],
+};
