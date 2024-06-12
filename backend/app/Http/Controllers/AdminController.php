@@ -23,11 +23,11 @@ class AdminController extends Controller
     public function dashboard()
     {
 
-        $menus = menu::all();
+        $menus = menu::paginate(10);
 
-        $orders = orders::all();
+        $orders = orders::paginate(10);
 
-        $reservations = reservations::all();
+        $reservations = reservations::paginate(10);
 
         return view('dashboard', compact('menus', 'orders', 'reservations'));
     }
